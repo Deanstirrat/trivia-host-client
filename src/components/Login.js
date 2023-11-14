@@ -23,7 +23,7 @@ const Login = () => {
 
     try {
       // Send a POST request to your API's login endpoint
-      const response = await fetch('http://localhost:3000/users/login', {
+      const response = await fetch('https://trivia-backend.fly.dev/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

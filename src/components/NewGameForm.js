@@ -11,7 +11,7 @@ const NewGameForm = ({socket, setNewGame, newGame}) => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await fetch('http://localhost:3000/hosts/quizzes', {
+        const response = await fetch('https://trivia-backend.fly.dev/hosts/quizzes', {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${user.token}`,
@@ -42,7 +42,7 @@ const NewGameForm = ({socket, setNewGame, newGame}) => {
 
     try {
       // Send a POST request to your API's login endpoint
-      const response = await fetch('http://localhost:3000/games/new', {
+      const response = await fetch('https://trivia-backend.fly.dev/games/new', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

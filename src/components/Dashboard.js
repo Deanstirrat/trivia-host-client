@@ -17,7 +17,7 @@ function Dashboard() {
 
   //update local socket on mount
   useEffect(() => {
-    const newSocket = io('http://localhost:3000');
+    const newSocket = io('https://trivia-backend.fly.dev');
     newSocket.on('connect' , () => {
       setSocket(newSocket);
     });
@@ -114,7 +114,7 @@ function Dashboard() {
     const fetchGames = async () => {
       console.log('fetch games');
       try {
-        const response = await fetch(`http://localhost:3000/hosts/${user.userId}`, {
+        const response = await fetch(`https://trivia-backend.fly.dev/hosts/${user.userId}`, {
             headers: {
                 Authorization: `Bearer ${user.token}`,
                 'Content-Type': 'application/json',
